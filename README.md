@@ -13,3 +13,7 @@ Load_and_normalise reads in your nifti images and design matrices, standardises 
 GPyModel_1D_affine.py performs GPs (single output) on the scale and shear components of the affine matrix. This assumes the image being registered has already been *rigidly* registered to a template.
 
 GPyModel_5D_alt.py performs GPs (multi output) on the T1w and T2w intensities and the 3 components of the warp field output from ants registration. Switching one method / modality out and another in is straightforward but the choice of kernel(s) may change.
+
+Recon_alt.py reconstructs nifti images from saved numpy npz files (output of GPyModel_5D_alt.py).
+
+Save_params.py performs a similar function to Recon_alt.py but saves the model parameters from the GPs as images (e.g. lengthscale, variance etc).
