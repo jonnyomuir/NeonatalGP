@@ -8,3 +8,8 @@ Currently makes a lot of assumptions about the structure of your data (e.g. file
 Bash script is designed to split the generic 5D script into n-jobs for use on an SGE array.
 If you have less tasks / outputs, then the 5D GPy and Recon scripts would need to be adapted - but the change isn't dramatic. 
 
+Load_and_normalise reads in your nifti images and design matrices, standardises them by voxel / column and save the whole thing into a numpy compliant npz. 
+
+GPyModel_1D_affine.py performs GPs (single output) on the scale and shear components of the affine matrix. This assumes the image being registered has already been *rigidly* registered to a template.
+
+GPyModel_5D_alt.py performs GPs (multi output) on the T1w and T2w intensities and the 3 components of the warp field output from ants registration. Switching one method / modality out and another in is straightforward but the choice of kernel(s) may change.
