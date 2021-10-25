@@ -26,4 +26,4 @@ or
 
 3. Recon_alt.py reconstructs nifti images from saved numpy npz files (output of GPyModel_5D_alt.py). Again this needs to be adapted according to the number of output dimensions, predictions and size of training data.
 
-(3. Save_params.py performs a similar function to Recon_alt.py but saves the model parameters from the GPs as images e.g. lengthscale, variance etc - lengthscale images can be particularly informative)
+(4. Save_params.py performs a similar function to Recon_alt.py but saves the model parameters from the GPs as images e.g. lengthscale, variance etc - lengthscale images can be particularly informative)
