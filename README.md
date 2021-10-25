@@ -17,7 +17,7 @@ Currently makes a lot of assumptions about the structure of your data (e.g. file
 Bash script is designed to split the generic 5D script into n-jobs for use on an SGE array.
 If you have less tasks / outputs, then the 5D GPy and Recon scripts would need to be adapted - but the change isn't dramatic. 
 
-Follows a 3 step structure:
+Follows a 4 step structure for volumetric images:
 1. Load_and_normalise reads in your nifti images and (comma separated) design matrices, standardises them by voxel / column and save the whole thing into a numpy compliant npz. 
 
 2. GPyModel_1D_affine.py performs GPs (single output) on the scale and shear components of the affine matrix. This assumes the image being registered has already been *rigidly* registered to a template.
